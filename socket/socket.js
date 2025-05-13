@@ -4,7 +4,7 @@ import Chat from '../models/Chat.js';
 export const initSocket = (server) => {
   const io = new Server(server, {
     cors: {
-      origin: ['http://localhost:5173', 'https://your-app.vercel.app'],
+      origin: ['http://localhost:5173', 'https://jadwal-three.vercel.app'],
       methods: ['GET', 'POST']
     }
   });

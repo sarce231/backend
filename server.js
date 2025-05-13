@@ -22,12 +22,11 @@ const server = http.createServer(app); //
 
 // Middleware CORS
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://your-app.vercel.app'],
+  origin: ['http://localhost:5173', 'https://jadwal-three.vercel.app'],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
 }));
-
 app.use(express.json());
 
 // Setup uploads folder
@@ -84,5 +83,5 @@ initSocket(server);
 // ✅ Start server
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
+  console.log(`🚀 Server running on port ${PORT}`);
 });
